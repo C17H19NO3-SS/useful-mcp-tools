@@ -1,0 +1,65 @@
+{
+  "name": "mcp-web-tools",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) tabanlı web araçları koleksiyonu",
+  "main": "build/index.js",
+  "type": "module",
+  "private": false,
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "gemini",
+    "web-tools",
+    "typescript",
+    "bun"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mcp-web-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/mcp-web-tools/issues"
+  },
+  "homepage": "https://github.com/yourusername/mcp-web-tools#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "bun": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.3",
+    "@types/pdfjs-dist": "^2.10.378",
+    "@types/turndown": "^5.0.5",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir build --target node",
+    "build:tsc": "tsc",
+    "start": "node build/index.js",
+    "start:bun": "bun run src/index.ts",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "test": "bun test",
+    "clean": "rm -rf build dist",
+    "prepublishOnly": "bun run build"
+  },
+  "dependencies": {
+    "@google/genai": "^1.8.0",
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1",
+    "node-fetch": "^3.3.2",
+    "pdfjs-dist": "^5.3.93",
+    "socket.io": "^4.8.1",
+    "turndown": "^7.2.0",
+    "undici": "^7.11.0",
+    "zod": "^3.22.4"
+  }
+}
